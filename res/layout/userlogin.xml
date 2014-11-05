@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/loginBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_in_no_shadow" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:stretchColumns="*" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/contactname"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:fontFamily="30dp"
+                android:paddingLeft="20dp"
+                android:text="@string/username"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#ffffff"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/editusername"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle" >
+
+            <TextView
+                android:id="@+id/tel"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:fontFamily="30dp"
+                android:paddingLeft="20dp"
+                android:text="Tel."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#ffffff"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edittel"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:ems="10"
+                android:inputType="number|phone" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:showDividers="middle" >
+
+	<Button
+	    android:id="@+id/loginbtn"
+	    android:text="Login"
+	    android:layout_width="80dp"
+	    android:layout_height="wrap_content"
+	    android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#ffffff"
+	    />
+            
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <ImageView
+        android:id="@+id/blackBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blackbg" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:background="#a8311d"
+        android:focusable="false"
+        android:text="End"
+        android:textColor="#ffffff"
+        android:textColorLink="#ffffff" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stop_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:alpha="60"
+        android:background="#3da6cd"
+        android:text="Call"
+        android:textColor="#ffffff"
+        android:textColorLink="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/callerID"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/mic"
+        android:text="In progress"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/callerID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="46dp"
+        android:layout_toLeftOf="@+id/start_button"
+        android:text="CallerID"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textColorHint="#ffffff"
+        android:textColorLink="#ffffff" />
+
+    <ImageView
+        android:id="@+id/mic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/mic" />
+
+</RelativeLayout>

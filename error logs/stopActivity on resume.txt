@@ -1,0 +1,1 @@
+07-30 02:46:14.313: E/AndroidRuntime(4057): java.lang.NullPointerException

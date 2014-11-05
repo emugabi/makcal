@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/plainBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plain_background" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="322dp"
+            android:layout_height="60dp"
+            android:layout_gravity="fill_vertical"
+            android:layout_weight="0.57"
+            android:gravity="clip_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/people" />
+
+            <TextView
+                android:id="@+id/server"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="33dp"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Pick a buddy"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/chatroom"
+            android:layout_width="match_parent"
+            android:layout_height="316dp"
+            android:contentDescription="hit Refresh" >
+        </ListView>
+
+        <requestFocus>
+
+            <TextView
+                android:id="@+id/callerID"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#00aff0"
+                android:textSize="20dp" />
+        </requestFocus>
+
+        <RelativeLayout
+            android:layout_width="322dp"
+            android:layout_height="60dp"
+            android:layout_gravity="fill_vertical"
+            android:layout_weight="0.57"
+            android:gravity="clip_vertical" >
+
+            <Button
+                android:id="@+id/refresh"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="refresh" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

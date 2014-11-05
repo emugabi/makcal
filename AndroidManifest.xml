@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fantastic.makcal"
+    android:versionCode="5"
+    android:versionName="Carrot" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Splash"
+            android:noHistory="true"
+            android:label="MakCal"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserLogin"
+            android:noHistory="true"
+            android:label="MakCal" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OtherUsers"
+            android:label="MakCal" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MessageView"
+            android:label="Messages" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Settings"
+            android:noHistory="true"
+            android:label="Settings" >
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+				<category
+					android:name="android.intent.category.DEFAULT">
+				</category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".Voip"
+		    android:noHistory="true"
+		    android:label="In Call">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+				<category
+					android:name="android.intent.category.DEFAULT">
+				</category>
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".Messaging">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+				<category
+					android:name="android.intent.category.DEFAULT">
+				</category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".SingleUser"
+		    android:noHistory="true"
+		    >
+		    <intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+				<category
+					android:name="android.intent.category.DEFAULT">
+				</category>
+			</intent-filter>
+		</activity>
+		<service 
+		    android:name=".SocketOperator"
+		    android:enabled="true"
+		    />
+    </application>
+
+</manifest>
